@@ -1,9 +1,10 @@
-site_name: Jessim et Virgil
+site_name: Jessim Daniel Virgil
 
 nav:
   - Home: index.md
   - About: about.md
   - Utils: utils.md
+  - Jessim : jessim.md
 
 theme:
   name: 'material'
