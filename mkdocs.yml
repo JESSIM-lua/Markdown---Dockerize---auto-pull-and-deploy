@@ -3,6 +3,7 @@ site_name: Jessim et Virgil
 nav:
   - Home: index.md
   - About: about.md
+  - Utils: utils.md
 
 theme:
   name: 'material'
