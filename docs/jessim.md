@@ -30,4 +30,6 @@ N'hésitez pas à me contacter pour toute collaboration ou opportunité professi
 
 ---
 
+[![Consulter le CV de Jessim](https://img.shields.io/badge/Consulter%20le%20CV%20de%20Jessim-Page%20CV-brightgreen)](cvjessim.md)
+
 **Jessim**
