@@ -1,0 +1,8 @@
+site_name: Jessim et Virgil
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme:
+  name: 'material'
