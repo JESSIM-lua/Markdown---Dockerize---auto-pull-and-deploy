@@ -4,21 +4,21 @@ import subprocess
 import requests
 from git import Repo
 
-# URL du dépôt GitLab
-repo_url = "https://gitlab.com/Virgil21/markdown.git"
+# URL du dépôt GitHub
+repo_url = "https://github.com/JESSIM-lua/Markdown---Dockerize---auto-pull-and-deploy"
 # Chemin vers le répertoire local du dépôt
-local_repo_path = "C:\mkdo"
+local_repo_path = "/workspaces/Markdown---Dockerize---auto-pull-and-deploy"
 # Intervalle de vérification en secondes (par exemple, toutes les 60 secondes)
-check_interval = 60
+check_interval = 5
 
 def get_latest_commit_sha(repo_url):
-    # URL de l'API GitLab pour récupérer les informations du dernier commit
-    api_url = f"https://gitlab.com/api/v4/projects/{repo_url.split('/')[-2]}%2F{repo_url.split('/')[-1].replace('.git', '')}/repository/commits"
+    # URL de l'API GitHub pour récupérer les informations du dernier commit
+    api_url = f"https://api.github.com/repos/{'/'.join(repo_url.split('/')[-2:])}/commits"
     response = requests.get(api_url)
     if response.status_code == 200:
         commits = response.json()
         if commits:
-            return commits[0]['id']
+            return commits[0]['sha']
     return None
 
 def pull_changes(local_repo_path):
