@@ -24,6 +24,9 @@ def get_latest_commit_sha(repo_url):
 def pull_changes(local_repo_path):
     repo = Repo(local_repo_path)
     origin = repo.remotes.origin
+    # Configurer Git pour utiliser la stratégie de fusion par défaut
+    repo.git.config('pull.rebase', 'false')
+    repo.git.config('pull.ff', 'only')
     origin.pull()
 
 def main():
